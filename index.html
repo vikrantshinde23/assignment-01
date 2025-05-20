@@ -25,13 +25,33 @@
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
 
-  <header class="text-center py-8 bg-gray-50 dark:bg-gray-800 sticky top-0 z-50 shadow">
-    <h1 class="text-5xl font-bold">Vikrant Shinde</h1>
-    <p class="text-xl mt-2">Aspiring IoT Developer | Web & Cybersecurity Enthusiast</p>
-    <button id="toggleDark" class="mt-4 px-6 py-2 rounded bg-gray-800 text-white dark:bg-gray-200 dark:text-black transition-colors">
-      Toggle Dark Mode
-    </button>
-  </header>
+<header class="py-8 px-6 bg-gray-50 dark:bg-gray-800 sticky top-0 z-50 shadow">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start md:justify-between gap-8">
+    
+    <!-- Left side: Name + Intro -->
+    <div class="md:flex-1 text-center md:text-left">
+      <h1 class="text-5xl font-bold mb-4">Vikrant Shinde</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 max-w-xl mx-auto md:mx-0">
+        Aspiring IoT Developer passionate about cybersecurity, web development, and creating innovative tech solutions. Dedicated to continuous learning and ethical hacking.
+      </p>
+      <button
+        id="toggleDark"
+        class="mt-6 px-6 py-2 rounded bg-indigo-600 text-white dark:bg-indigo-400 dark:text-black transition-colors"
+      >
+        Toggle Dark Mode
+      </button>
+    </div>
+
+    <!-- Right side: Profile Image -->
+    <div class="md:flex-1 flex justify-center md:justify-end">
+      <img
+        src="IMG_6399.jpg"
+        alt="Vikrant Shinde"
+        class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-indigo-600 dark:border-indigo-400"
+      />
+    </div>
+  </div>
+</header>
 
   <!-- Video Introduction -->
   <section class="py-10 px-6 max-w-4xl mx-auto fade-in" id="video-intro">
