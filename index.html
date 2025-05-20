@@ -1,95 +1,233 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vikrant Shinde Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#1D4ED8',
+              'secondary': '#9333EA',
+              'accent': '#F59E0B',
+              'neutral': '#6B7280',
+            },
+          },
+        },
+      };
+    </script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-gray-900">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md p-5 fixed w-full top-0 z-50 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-blue-600">Vikrant Shinde</h1>
-    <nav>
-      <ul class="flex space-x-4">
-        <li><a href="#welcome" class="hover:text-blue-500">Home</a></li>
-        <li><a href="#about" class="hover:text-blue-500">About</a></li>
-        <li><a href="#achievements" class="hover:text-blue-500">Achievements</a></li>
-        <li><a href="#goals" class="hover:text-blue-500">Goals</a></li>
-        <li><a href="#personal" class="hover:text-blue-500">Personal</a></li>
-        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo text-2xl font-bold text-primary">
+                <h1>Vikrant Shinde</h1>
+            </div>
+            <nav id="nav-menu">
+                <ul class="flex space-x-6">
+                    <li><a href="#welcome" class="text-lg hover:text-primary">Home</a></li>
+                    <li><a href="#about" class="text-lg hover:text-primary">About</a></li>
+                    <li><a href="#achievements" class="text-lg hover:text-primary">Achievements</a></li>
+                    <li><a href="#goals" class="text-lg hover:text-primary">Future Goals</a></li>
+                    <li><a href="#personal" class="text-lg hover:text-primary">Personal</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger hidden md:block">
+                <div class="bar w-6 h-1 mb-1 bg-gray-800"></div>
+                <div class="bar w-6 h-1 mb-1 bg-gray-800"></div>
+                <div class="bar w-6 h-1 bg-gray-800"></div>
+            </div>
+        </div>
+    </header>
 
-  <!-- Welcome Section -->
-  <section id="welcome" class="pt-24 p-6 text-center">
-    <h2 class="text-3xl font-bold text-blue-700 mb-4">Welcome to My Portfolio</h2>
-    <p class="text-lg max-w-3xl mx-auto">Hi, I'm Vikrant Shinde, aspiring IoT developer passionate about innovation in sensor tech and cybersecurity.</p>
-    <div id="quote" class="mt-6 text-blue-600 italic"></div>
-  </section>
+    <!-- Welcome Section -->
+    <section id="welcome" class="section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-primary text-center mb-8">Welcome to My Portfolio</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="welcome-text max-w-xl">
+                    <p class="text-lg mb-4">
+                        Hi, I'm <strong>Vikrant Shinde</strong>, an aspiring <strong>IoT Developer</strong> passionate about creating technology that bridges the gap between the physical and digital world. Currently pursuing a degree in <strong>Electronics and Computer Science Engineering</strong> at <strong>St. John College of Engineering & Management</strong>, I am deeply committed to innovation in <strong>sensor technology</strong> and <strong>cybersecurity</strong>.
+                    </p>
+                    <p class="text-lg mb-4">
+                        Through hands-on projects like the <strong>Land Rover prototype for earthquake rescue operations</strong>, and certifications in <strong>Cybersecurity</strong> and <strong>Cisco CCNA</strong>, I've honed my technical skills and collaborative spirit. I'm excited to contribute to impactful projects that drive technological advancement and solve real-world challenges.
+                    </p>
+                    <p class="text-lg">Dive into my journey, explore my projects, and connect with me as I work towards building a smarter, more secure connected world.</p>
+                </div>
+                <div class="welcome-image mt-6 md:mt-0 md:w-1/3">
+                    <img src="IMG_6399.jpg" alt="Your Photo" class="rounded-full w-48 h-48 object-cover mx-auto">
+                </div>
+            </div>
+            <div class="video-container mt-12 text-center">
+                <h3 class="text-2xl font-semibold">Video Introduction</h3>
+                <p class="mt-2">Here's a short introduction about myself:</p>
+                <div class="video-placeholder mt-4">
+                    <p>Yet to be Added</p>
+                    <p><small>(1-2 minute introduction video)</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="p-6 bg-white">
-    <h2 class="text-2xl font-semibold text-center text-blue-600 mb-4">About Me</h2>
-    <div class="max-w-xl mx-auto space-y-2">
-      <p><strong>Name:</strong> Vikrant Shinde</p>
-      <p><strong>Location:</strong> Virar, India</p>
-      <p><strong>Graduation:</strong> B.Tech, 2027</p>
-    </div>
-  </section>
+    <!-- About Me Section -->
+    <section id="about" class="section py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-primary text-center mb-8">About Me</h2>
+            <div class="flex flex-wrap justify-between">
+                <div class="info-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4">Basic Info</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>Name:</strong> Vikrant Shinde</li>
+                        <li><strong>Location:</strong> Virar, India</li>
+                    </ul>
+                </div>
+                <div class="info-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4">Education</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>Degree:</strong> B.Tech in Electronics & Computer Science</li>
+                        <li><strong>University:</strong> University of Mumbai</li>
+                        <li><strong>Graduation Year:</strong> 2027</li>
+                    </ul>
+                </div>
+                <div class="info-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4">Languages</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>English:</strong> Professional Proficiency</li>
+                        <li><strong>Marathi:</strong> Bilingual Proficiency</li>
+                        <li><strong>Hindi:</strong> Professional Proficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Achievements from JSON -->
-  <section id="achievements" class="p-6 bg-gray-50">
-    <h2 class="text-2xl font-semibold text-center text-blue-600 mb-4">Achievements</h2>
-    <ul id="achievements-list" class="max-w-2xl mx-auto list-disc list-inside text-lg space-y-2"></ul>
-  </section>
+    <!-- Achievements Section -->
+    <section id="achievements" class="section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-primary text-center mb-8">Achievements</h2>
+            <div class="achievements-content flex flex-wrap justify-between">
+                <div class="achievement-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Professional Achievements</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>Cybersecurity & Networking Internship:</strong> Completed a hands-on internship with IBM and Cisco CCNA in December 2024, gaining skills in cybersecurity protocols and network configuration.</li>
+                        <li><strong>Data Structures and Algorithms in Java Certification:</strong> Completed a 8 Weeks NPTEL Course and gained knowledge about data structures and algorithms.</li>
+                        <li><strong>Active Campus Leadership:</strong> Contributed to technical events and media activities as part of CSI, SPACE, and the Student Placement Cell at SJCEM.</li>
+                    </ul>
+                </div>
+                <div class="achievement-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Projects</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>Land Rover for Earthquake Rescue:</strong> Built a prototype rover designed to assist in earthquake rescue missions. Integrated soil sensors, temperature sensors, and infrared detection to identify human presence and assess ground stability in disaster-hit zones.</li>
+                        <li><strong>Network Security Simulation (Cisco Packet Tracer):</strong> Simulated a secure enterprise network using Cisco Packet Tracer. Configured routers, firewalls, and VLANs to demonstrate threat prevention and proper traffic segmentation for cybersecurity training.</li>
+                    </ul>
+                </div>
+                <div class="achievement-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Recognition</h3>
+                    <ul class="list-none space-y-2">
+                        <li>Award or recognition 1</li>
+                        <li>Award or recognition 2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Books and Hobbies from JSON -->
-  <section id="personal" class="p-6 bg-white">
-    <h2 class="text-2xl font-semibold text-center text-blue-600 mb-4">Personal</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div>
-        <h3 class="font-bold text-blue-500">Favourite Books</h3>
-        <ul id="books-list" class="list-disc list-inside mt-2 space-y-1"></ul>
-      </div>
-      <div>
-        <h3 class="font-bold text-blue-500">Hobbies</h3>
-        <ul id="hobbies-list" class="list-disc list-inside mt-2 space-y-1"></ul>
-      </div>
-    </div>
-  </section>
+    <!-- Future Goals Section -->
+    <section id="goals" class="section py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-primary text-center mb-8">Future Goals</h2>
+            <div class="goals-content flex flex-wrap justify-between">
+                <div class="goals-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Professional Aspirations</h3>
+                    <p class="text-lg">To become a skilled IoT Developer specializing in smart systems and secure embedded technologies, contributing to innovative real-world solutions. I aim to build a career at the intersection of web development and cybersecurity, creating secure, efficient, and user-friendly web applications...</p>
+                </div>
+                <div class="goals-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Personal Mission</h3>
+                    <p class="text-lg">To develop secure, innovative web solutions that enhance user experience while protecting data and privacy...</p>
+                </div>
+                <div class="goals-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Short-term Objectives</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>Goal 1:</strong> Master modern web development frameworks (e.g., React, Node.js) to build efficient, scalable applications.</li>
+                        <li><strong>Goal 2:</strong> Strengthen my understanding of cybersecurity principles and tools to ensure secure coding practices.</li>
+                        <li><strong>Goal 3:</strong> Contribute to open-source projects to gain real-world experience and collaborate with the tech community.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="p-6 bg-gray-100">
-    <h2 class="text-2xl font-semibold text-center text-blue-600 mb-6">Contact Me</h2>
-    <div class="max-w-xl mx-auto space-y-4">
-      <p><strong>Phone:</strong> <a href="tel:+919876543210" class="text-blue-500">+91 9876543210</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/919876543210" class="text-green-600">Chat on WhatsApp</a></p>
-      <p><strong>Email:</strong> <a href="mailto:vikrantshinde6666@gmail.com" class="text-blue-500">vikrantshinde6666@gmail.com</a></p>
-      <p><strong>Location:</strong></p>
-      <iframe class="w-full h-64 border" src="https://www.google.com/maps?q=Virar,+India&output=embed"></iframe>
+    <!-- Personal Side Section -->
+    <section id="personal" class="section py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-primary text-center mb-8">Personal Side</h2>
+            <div class="personal-content flex flex-wrap justify-between">
+                <div class="personal-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Hobbies</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>Contributing to Open-Source Security Projects:</strong> Collaborating on projects focused on improving cybersecurity tools, web app security, or IoT device protection.</li>
+                        <li><strong>Ethical Hacking:</strong> Practicing penetration testing and vulnerability assessments on web applications and IoT systems to understand and fix security flaws.</li>
+                    </ul>
+                </div>
+                <div class="personal-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Role Models</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>Kevin Mitnick:</strong> A former hacker turned cybersecurity expert, Mitnick's journey from breaking into systems to becoming a leading security consultant is inspiring...</li>
+                        <li><strong>Marissa Mayer:</strong> Former Google executive, Mayer's work in web development...</li>
+                    </ul>
+                </div>
+                <div class="personal-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Favorite Books</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>"The Phoenix Project" by Gene Kim, Kevin Behr, and George Spafford</strong></li>
+                        <li><strong>"The Web Application Hacker's Handbook" by Dafydd Stuttard and Marcus Pinto</strong></li>
+                    </ul>
+                </div>
+                <div class="personal-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Favorite Websites & Startups</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>GitHub:</strong> Essential for discovering open-source projects...</li>
+                        <li><strong>Stack Overflow:</strong> A go-to resource for coding solutions...</li>
+                    </ul>
+                </div>
+                <div class="personal-card w-full md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Volunteering Experience</h3>
+                    <ul class="list-none space-y-2">
+                        <li><strong>Cybersecurity Awareness Workshops:</strong> I volunteered to help organize and lead workshops...</li>
+                        <li><strong>Tech Bootcamp:</strong> I volunteered...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <form class="bg-white shadow-md p-4 rounded">
-        <input type="text" placeholder="Your Name" class="w-full p-2 mb-3 border rounded" required>
-        <input type="email" placeholder="Your Email" class="w-full p-2 mb-3 border rounded" required>
-        <textarea placeholder="Your Message" class="w-full p-2 mb-3 border rounded" rows="4" required></textarea>
-        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Send</button>
-      </form>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="footer-info text-center md:text-left">
+                <h3 class="text-2xl font-semibold">Vikrant Shinde</h3>
+                <p>Personal Website</p>
+                <p>© 2025 All Rights Reserved</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/vikrantshinde23" class="text-white mx-3" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="www.linkedin.com/in/vikrant-shinde-3420a2274" class="text-white mx-3" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white mx-3" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-3" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contact-info text-center md:text-right">
+                <p><i class="fas fa-envelope"></i> vikrantshinde6666@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Virar, India</p>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="bg-blue-700 text-white text-center py-4">
-    <p>© <span class="year">2025</span> Vikrant Shinde</p>
-    <div class="space-x-4 mt-2">
-      <a href="https://github.com/vikrantshinde23">GitHub</a>
-      <a href="https://linkedin.com/in/vikrant-shinde-3420a2274">LinkedIn</a>
-      <a href="#">Instagram</a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
