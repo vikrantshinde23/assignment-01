@@ -1,14 +1,30 @@
 {
-  "achievements": [
-    { "title": "Won State-Level Hackathon", "year": 2022 },
-    { "title": "Completed Cisco CCNA Internship", "year": 2024 }
+  "professionalAchievements": [
+    {
+      "title": "Cybersecurity & Networking Internship",
+      "description": "Completed a hands-on internship with IBM and Cisco CCNA in December 2024, gaining skills in cybersecurity protocols and network configuration."
+    },
+    {
+      "title": "Data Structures and Algorithms in Java Certification",
+      "description": "Completed an 8 Weeks NPTEL Course and gained knowledge about data structures and algorithms."
+    },
+    {
+      "title": "Active Campus Leadership",
+      "description": "Contributed to technical events and media activities as part of CSI, SPACE, and the Student Placement Cell at SJCEM."
+    }
   ],
-  "books": [
-    "The Phoenix Project",
-    "The Web Application Hacker's Handbook"
+  "projects": [
+    {
+      "title": "Land Rover for Earthquake Rescue",
+      "description": "Built a prototype rover designed to assist in earthquake rescue missions. Integrated soil sensors, temperature sensors, and infrared detection."
+    },
+    {
+      "title": "Network Security Simulation (Cisco Packet Tracer)",
+      "description": "Simulated a secure enterprise network using Cisco Packet Tracer with routers, firewalls, and VLANs."
+    }
   ],
-  "hobbies": [
-    "Ethical Hacking",
-    "Open Source Security Contributions"
+  "recognition": [
+    { "title": "Award or recognition 1" },
+    { "title": "Award or recognition 2" }
   ]
 }
