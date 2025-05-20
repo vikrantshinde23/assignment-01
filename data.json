@@ -1,0 +1,14 @@
+{
+  "achievements": [
+    { "title": "Won State-Level Hackathon", "year": 2022 },
+    { "title": "Completed Cisco CCNA Internship", "year": 2024 }
+  ],
+  "books": [
+    "The Phoenix Project",
+    "The Web Application Hacker's Handbook"
+  ],
+  "hobbies": [
+    "Ethical Hacking",
+    "Open Source Security Contributions"
+  ]
+}
