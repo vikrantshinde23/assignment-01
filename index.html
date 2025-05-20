@@ -1,226 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio </title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vikrant Shinde Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="logo">
-            <h1>Vikrant Shinde</h1>
-        </div>
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="#welcome">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#goals">Future Goals</a></li>
-                <li><a href="#personal">Personal</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </header>
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- Welcome Section -->
-    <section id="welcome" class="section">
-        <div class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <div class="welcome-content">
-                <div class="welcome-text">
-                    <p>
-        Hi, I'm <strong>Vikrant Shinde</strong>, an aspiring <strong>IoT Developer</strong> passionate about creating technology that bridges 
-        the gap between the physical and digital world. Currently pursuing a degree in <strong>Electronics and Computer Science Engineering</strong> 
-        at <strong>St. John College of Engineering & Management</strong>, I am deeply committed to innovation in <strong>sensor technology</strong> 
-        and <strong>cybersecurity</strong>.
-    </p>
-    <p>
-        Through hands-on projects like the <strong>Land Rover prototype for earthquake rescue operations</strong>, and certifications in 
-        <strong>Cybersecurity</strong> and <strong>Cisco CCNA</strong>, I've honed my technical skills and collaborative spirit. I'm excited to 
-        contribute to impactful projects that drive technological advancement and solve real-world challenges.
-    </p>
-                    <p>Dive into my journey, explore my projects, and connect with me as I work towards building a smarter, more secure connected world.</p>
-                </div>
-                <div class="welcome-image">
-                    <img src="IMG_6399.jpg" alt="Your Photo" id="profile-photo">
-                </div>
-            </div>
-            <div class="video-container">
-                <h3>Video Introduction</h3>
-                <p>Here's a short introduction about myself:</p>
-                <!-- Replace with your actual video -->
-                <div class="video-placeholder">
-                    <p>Yet to be Added</p>
-                    <p><small>(1-2 minute introduction video)</small></p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Header -->
+  <header class="bg-white shadow-md p-5 fixed w-full top-0 z-50 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600">Vikrant Shinde</h1>
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="#welcome" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#achievements" class="hover:text-blue-500">Achievements</a></li>
+        <li><a href="#goals" class="hover:text-blue-500">Goals</a></li>
+        <li><a href="#personal" class="hover:text-blue-500">Personal</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="info-card">
-                    <h3>Basic Info</h3>
-                    <ul>
-                        <li><strong>Name:</strong> Vikrant Shinde</li>
-                        <li><strong>Location:</strong> Virar, India</li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>Education</h3>
-                    <ul>
-                        <li><strong>Degree:</strong> B.Tech in Electronics & Computer Science</li>
-                        <li><strong>University:</strong> University of Mumbai</li>
-                        <li><strong>Graduation Year:</strong> 2027</li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li><strong>English:</strong> Professional Proficiency </li>
-                        <li><strong>Marathi:</strong> Bilingual Proficiency </li>
-                        <li><strong>Hindi:</strong> Professional Proficiency </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Welcome Section -->
+  <section id="welcome" class="pt-24 p-6 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-4">Welcome to My Portfolio</h2>
+    <p class="text-lg max-w-3xl mx-auto">Hi, I'm Vikrant Shinde, aspiring IoT developer passionate about innovation in sensor tech and cybersecurity.</p>
+    <div id="quote" class="mt-6 text-blue-600 italic"></div>
+  </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2>Achievements</h2>
-            <div class="achievements-content">
-                <div class="achievement-card">
-                    <h3>Professional Achievements</h3>
-                    <ul>
-                        <li><strong>Cybersecurity & Networking Internship: </strong>Completed a hands-on internship with IBM and Cisco CCNA in December 2024, gaining skills in cybersecurity protocols and network configuration.</li>
-                        <li><strong>Data Structures and Algorithms in Java Certification: </strong>Completed a 8 Weeks NPTEL Course and gained knowledge about data structures and algorithms.</li>
-                        <li><strong>Active Campus Leadership: </strong>Contributed to technical events and media activities as part of CSI, SPACE, and the Student Placement Cell at SJCEM.</li>
-                    </ul>
-                </div>
-                <div class="achievement-card">
-                    <h3>Projects</h3>
-                    <ul>
-                        <li><strong>Land Rover for Earthquake Rescue: </strong>Built a prototype rover designed to assist in earthquake rescue missions. Integrated soil sensors, temperature sensors, and infrared detection to identify human presence and assess ground stability in disaster-hit zones.</li>
-                        <li><strong>Network Security Simulation (Cisco Packet Tracer): </strong>Simulated a secure enterprise network using Cisco Packet Tracer. Configured routers, firewalls, and VLANs to demonstrate threat prevention and proper traffic segmentation for cybersecurity training.</li>
-                    </ul>
-                </div>
-                <div class="achievement-card">
-                    <h3>Recognition</h3>
-                    <ul>
-                        <li>Award or recognition 1</li>
-                        <li>Award or recognition 2</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- About -->
+  <section id="about" class="p-6 bg-white">
+    <h2 class="text-2xl font-semibold text-center text-blue-600 mb-4">About Me</h2>
+    <div class="max-w-xl mx-auto space-y-2">
+      <p><strong>Name:</strong> Vikrant Shinde</p>
+      <p><strong>Location:</strong> Virar, India</p>
+      <p><strong>Graduation:</strong> B.Tech, 2027</p>
+    </div>
+  </section>
 
-    <!-- Future Goals Section -->
-    <section id="goals" class="section">
-        <div class="container">
-            <h2>Future Goals</h2>
-            <div class="goals-content">
-                <div class="goals-card">
-                    <h3>Professional Aspirations</h3>
-                    <p>To become a skilled IoT Developer specializing in smart systems and secure embedded technologies, contributing to innovative real-world solutions. I aim to build a career at the intersection of web development and cybersecurity, creating secure, efficient, and user-friendly web applications. My goal is to grow as a full-stack developer with deep knowledge of secure coding practices, while also expanding my skills in penetration testing, network security, and application hardening. I envision becoming a key contributor to developing robust digital systems that prioritize both functionality and protection against modern cyber threats.</p>
-                </div>
-                <div class="goals-card">
-                    <h3>Personal Mission</h3>
-                    <p>To develop secure, innovative web solutions that enhance user experience while protecting data and privacy. I am committed to continuous learning, ethical practices, and contributing to a safer digital world by bridging the gap between web development and cybersecurity. I aim to contribute by building secure, user-friendly web solutions that protect privacy and promote trust online. Through my work in web development and cybersecurity, I hope to make the digital world safer, more accessible, and more ethical for all.</p>
-                </div>
-                <div class="goals-card">
-                    <h3>Short-term Objectives</h3>
-                    <ul>
-                        <li><strong>Goal 1: </strong>Master modern web development frameworks (e.g., React, Node.js) to build efficient, scalable applications.</li>
-                        <li><strong>Goal 2: </strong>Strengthen my understanding of cybersecurity principles and tools to ensure secure coding practices.</li>
-                        <li><strong>Goal 3: </strong>Contribute to open-source projects to gain real-world experience and collaborate with the tech community.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Achievements from JSON -->
+  <section id="achievements" class="p-6 bg-gray-50">
+    <h2 class="text-2xl font-semibold text-center text-blue-600 mb-4">Achievements</h2>
+    <ul id="achievements-list" class="max-w-2xl mx-auto list-disc list-inside text-lg space-y-2"></ul>
+  </section>
 
-    <!-- Personal Side Section -->
-    <section id="personal" class="section">
-        <div class="container">
-            <h2>Personal Side</h2>
-            <div class="personal-content">
-                <div class="personal-card">
-                    <h3>Hobbies</h3>
-                    <ul>
-                        <li><strong>Contributing to Open-Source Security Projects:</strong> Collaborating on projects focused on improving cybersecurity tools, web app security, or IoT device protection.</li>
-                        <li><strong>Ethical Hacking:</strong> Practicing penetration testing and vulnerability assessments on web applications and IoT systems to understand and fix security flaws.</li>
-                    </ul>
-                </div>
-                <div class="personal-card">
-                    <h3>Role Models</h3>
-                    <ul>
-                        <li><strong>Kevin Mitnick:</strong> A former hacker turned cybersecurity expert, Mitnick's journey from breaking into systems to becoming a leading security consultant is inspiring. He has contributed significantly to cybersecurity awareness and education</li>
-                        <li><strong>Marissa Mayer:</strong> Former Google executive, Mayer's work in web development, product design, and technology leadership set an example of how to combine technical expertise with impactful leadership in the tech world</li>
-                    </ul>
-                </div>
-                <div class="personal-card">
-                    <h3>Favorite Books</h3>
-                    <ul>
-                        <li><strong>"The Phoenix Project" by Gene Kim, Kevin Behr, and George Spafford</strong> A great read for understanding DevOps, IT, and the challenges of improving processes in technology-driven organizations.</li>
-                        <li><strong>"The Web Application Hacker's Handbook" by Dafydd Stuttard and Marcus Pinto</strong> A comprehensive guide to web application security and ethical hacking, perfect for anyone interested in cybersecurity</li>
-                    </ul>
-                </div>
-                <div class="personal-card">
-                    <h3>Favorite Websites & Startups</h3>
-                    <ul>
-                        <li><strong>GitHub 1:</strong> Essential for discovering open-source projects, collaborating with other developers, and contributing to cybersecurity and web development initiatives</li>
-                        <li><strong>Stack Overflow 2:</strong> A go-to resource for coding solutions, web development tips, and cybersecurity discussions. It’s an invaluable site for developers at any leve</li>
-                    </ul>
-                </div>
-                <div class="personal-card">
-                    <h3>Volunteering Experience</h3>
-                    <ul>
-                        <li><strong>Cybersecurity Awareness Workshops 1:</strong> I volunteered to help organize and lead workshops on basic cybersecurity practices, educating students and local businesses on how to protect their digital assets from common cyber threats.
+  <!-- Books and Hobbies from JSON -->
+  <section id="personal" class="p-6 bg-white">
+    <h2 class="text-2xl font-semibold text-center text-blue-600 mb-4">Personal</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="font-bold text-blue-500">Favourite Books</h3>
+        <ul id="books-list" class="list-disc list-inside mt-2 space-y-1"></ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-blue-500">Hobbies</h3>
+        <ul id="hobbies-list" class="list-disc list-inside mt-2 space-y-1"></ul>
+      </div>
+    </div>
+  </section>
 
-</li>
-                        <li><strong>Tech Bootcamp 2:</strong> I volunteered along with aspiring developers in a coding bootcamp, focusing on web development and security best practices, helping them build secure and scalable web applications.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="p-6 bg-gray-100">
+    <h2 class="text-2xl font-semibold text-center text-blue-600 mb-6">Contact Me</h2>
+    <div class="max-w-xl mx-auto space-y-4">
+      <p><strong>Phone:</strong> <a href="tel:+919876543210" class="text-blue-500">+91 9876543210</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/919876543210" class="text-green-600">Chat on WhatsApp</a></p>
+      <p><strong>Email:</strong> <a href="mailto:vikrantshinde6666@gmail.com" class="text-blue-500">vikrantshinde6666@gmail.com</a></p>
+      <p><strong>Location:</strong></p>
+      <iframe class="w-full h-64 border" src="https://www.google.com/maps?q=Virar,+India&output=embed"></iframe>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Vikrant Shinde</h3>
-                    <p>Personal Website</p>
-                    <p>© 2025 All Rights Reserved</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/vikrantshinde23" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="www.linkedin.com/in/vikrant-shinde-3420a2274" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> vikrantshinde6666@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Virar, India</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+      <form class="bg-white shadow-md p-4 rounded">
+        <input type="text" placeholder="Your Name" class="w-full p-2 mb-3 border rounded" required>
+        <input type="email" placeholder="Your Email" class="w-full p-2 mb-3 border rounded" required>
+        <textarea placeholder="Your Message" class="w-full p-2 mb-3 border rounded" rows="4" required></textarea>
+        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Send</button>
+      </form>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center py-4">
+    <p>© <span class="year">2025</span> Vikrant Shinde</p>
+    <div class="space-x-4 mt-2">
+      <a href="https://github.com/vikrantshinde23">GitHub</a>
+      <a href="https://linkedin.com/in/vikrant-shinde-3420a2274">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
