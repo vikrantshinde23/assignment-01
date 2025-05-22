@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Online Shopping</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header id="shopp" class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">ShopEase</h1>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#home" class="hover:text-indigo-500">Home</a>
+        <a href="#products" class="hover:text-indigo-500">Products</a>
+        <a href="#about" class="hover:text-indigo-500">About</a>
+        <a href="#contact" class="hover:text-indigo-500">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-indigo-600 text-white py-20 text-center">
+    <h2 class="text-4xl font-bold mb-4">Welcome to ShopEase</h2>
+    <p class="text-lg">Your one-stop shop for the best deals online!</p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-16 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-10 text-center">Our Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Product Card -->
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="boat.jpg" alt="Product 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">Product 1</h3>
+          <p class="text-gray-600">$29.99</p>
+          <button class="mt-2 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Duplicate more product cards as needed -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-4">About Us</h2>
+    <p>ShopEase is dedicated to providing quality products at affordable prices. We aim to bring you the best shopping experience from the comfort of your home.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-200 py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+    <p>Email: support@shopease.com</p>
+    <p>Phone: +123 456 7890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 ShopEase. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
