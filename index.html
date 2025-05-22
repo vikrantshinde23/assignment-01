@@ -24,15 +24,14 @@
   </style>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
-
-<header class=" top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
-  <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<header class="top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative">
     <!-- Logo / Name -->
     <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
       Vikrant Shinde
     </div>
 
-    <!-- Nav Links -->
+    <!-- Nav Links (Desktop) -->
     <ul class="hidden md:flex space-x-8 text-gray-700 dark:text-gray-300 font-medium">
       <li><a href="#video" class="hover:text-indigo-600 dark:hover:text-indigo-400">Video</a></li>
       <li><a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400">About</a></li>
@@ -43,18 +42,51 @@
       <li><a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a></li>
     </ul>
 
-    <!-- Dark Mode Toggle Button -->
+    <!-- Dark Mode Toggle Button (hidden on small screens to keep UI clean) -->
     <button
       id="toggleDark"
-      class="ml-4 px-3 py-1 rounded bg-indigo-600 text-white dark:bg-indigo-400 dark:text-black transition-colors"
+      class="hidden md:inline ml-4 px-3 py-1 rounded bg-indigo-600 text-white dark:bg-indigo-400 dark:text-black transition-colors"
     >
       Toggle Dark
     </button>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button
+      id="menuToggle"
+      aria-label="Toggle menu"
+      class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded hover:bg-indigo-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+    >
+      <span class="block w-6 h-0.5 bg-gray-700 dark:bg-gray-300 mb-1"></span>
+      <span class="block w-6 h-0.5 bg-gray-700 dark:bg-gray-300 mb-1"></span>
+      <span class="block w-6 h-0.5 bg-gray-700 dark:bg-gray-300"></span>
+    </button>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <ul
+      id="mobileMenu"
+      class="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded shadow-lg text-gray-700 dark:text-gray-300 font-medium flex flex-col space-y-2 p-4 md:hidden"
+      style="display: none;"
+    >
+      <li><a href="#video" class="block hover:text-indigo-600 dark:hover:text-indigo-400">Video</a></li>
+      <li><a href="#about" class="block hover:text-indigo-600 dark:hover:text-indigo-400">About</a></li>
+      <li><a href="#achievements" class="block hover:text-indigo-600 dark:hover:text-indigo-400">Achievements</a></li>
+      <li><a href="#projects" class="block hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a></li>
+      <li><a href="#goals" class="block hover:text-indigo-600 dark:hover:text-indigo-400">Goals</a></li>
+      <li><a href="#personal" class="block hover:text-indigo-600 dark:hover:text-indigo-400">Personal</a></li>
+      <li><a href="#contact" class="block hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a></li>
+      <li>
+        <button
+          id="toggleDarkMobile"
+          class="w-full mt-2 px-3 py-1 rounded bg-indigo-600 text-white dark:bg-indigo-400 dark:text-black transition-colors"
+        >
+          Toggle Dark
+        </button>
+      </li>
+    </ul>
   </nav>
 
   <!-- Main Header Content -->
   <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center md:items-start md:justify-between gap-8">
-    
     <!-- Left side: Name + Intro -->
     <div class="md:flex-1 text-center md:text-left">
       <h1 class="text-5xl font-bold mb-4">Vikrant Shinde</h1>
@@ -74,15 +106,48 @@
   </div>
 </header>
 
+<script>
+  // Hamburger menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+    if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+      mobileMenu.style.display = 'flex';
+    } else {
+      mobileMenu.style.display = 'none';
+    }
+  });
+
+  // Dark mode toggle for desktop button
+  const toggleDarkBtn = document.getElementById('toggleDark');
+  toggleDarkBtn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+  });
+
+  // Dark mode toggle for mobile button
+  const toggleDarkMobileBtn = document.getElementById('toggleDarkMobile');
+  toggleDarkMobileBtn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+  });
+</script>
+
+
   <!-- Video Introduction -->
-  <section class="py-10 px-6 max-w-4xl mx-auto fade-in" id="video-intro">
-    <h2 class="text-3xl font-semibold mb-3">Video Introduction</h2>
-    <p class="mb-5">Here's a short introduction about myself:</p>
-    <div class="bg-gray-200 dark:bg-gray-800 rounded p-8 text-center">
-      <p class="text-lg font-semibold">Yet to be Added</p>
-      <p class="text-sm">(1-2 minute introduction video)</p>
-    </div>
-  </section>
+ <section class="py-10 px-6 max-w-4xl mx-auto fade-in" id="video-intro">
+  <h2 class="text-3xl font-semibold mb-3">Video Introduction</h2>
+  <p class="mb-5">Here's a short introduction about myself:</p>
+  <div class="bg-gray-200 dark:bg-gray-800 rounded p-8 text-center">
+    <video 
+      width="200px" 
+      height="200px" 
+      src="video4.mp4" 
+      controls
+      class="mx-auto block"
+    ></video>
+  </div>
+</section>
+
 
   <!-- About Me -->
   <section class="py-10 px-6 max-w-4xl mx-auto fade-in" id="about">
@@ -119,6 +184,50 @@
     <h2 class="text-3xl font-bold mb-6">Achievements</h2>
     <div id="achievementsGrid" class="grid md:grid-cols-3 gap-6">
       <!-- JS will dynamically insert cards here -->
+       <section id="professional-achievements" class="py-8 px-6 max-w-4xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-lg">
+  <h2 class="text-3xl font-semibold mb-6">Professional Achievements</h2>
+  <ul class="space-y-6">
+    <li>
+      <h3 class="text-xl font-bold text-indigo-600">Cybersecurity & Networking Internship</h3>
+      <p>Completed a hands-on internship with IBM and Cisco CCNA in December 2024, gaining skills in cybersecurity protocols and network configuration.</p>
+    </li>
+    <li>
+      <h3 class="text-xl font-bold text-indigo-600">Data Structures and Algorithms in Java Certification</h3>
+      <p>Completed an 8 Weeks NPTEL Course and gained knowledge about data structures and algorithms.</p>
+    </li>
+    <li>
+      <h3 class="text-xl font-bold text-indigo-600">Active Campus Leadership</h3>
+      <p>Contributed to technical events and media activities as part of CSI, SPACE, and the Student Placement Cell at SJCEM.</p>
+    </li>
+  </ul>
+</section>
+
+<section id="projects" class="py-8 px-6 max-w-4xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-lg mt-10">
+  <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+  <ul class="space-y-6">
+    <li>
+      <h3 class="text-xl font-bold text-indigo-600">Land Rover for Earthquake Rescue</h3>
+      <p>Built a prototype rover designed to assist in earthquake rescue missions. Integrated soil sensors, temperature sensors, and infrared detection.</p>
+    </li>
+    <li>
+      <h3 class="text-xl font-bold text-indigo-600">Network Security Simulation (Cisco Packet Tracer)</h3>
+      <p>Simulated a secure enterprise network using Cisco Packet Tracer with routers, firewalls, and VLANs.</p>
+    </li>
+    <li>
+      <h3>Shopping website</h3>
+      <a style="color: blue; font-weight: 900;" href="shopping.html"><p>click Here</p></a>
+    </li>
+  </ul>
+</section>
+
+<section id="recognition" class="py-8 px-6 max-w-4xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-lg mt-10">
+  <h2 class="text-3xl font-semibold mb-6">Recognition</h2>
+  <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+    <li>Award or recognition 1</li>
+    <li>Award or recognition 2</li>
+  </ul>
+</section>
+
     </div>
   </section>
 
